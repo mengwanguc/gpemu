@@ -1,0 +1,1 @@
+{"train_top1": [], "train_top5": [], "val_top1": [], "val_top5": [], "model": "", "args.epochs": 50, "args.batch_size": 256, "batch_acc_train": {}, "batch_acc_val": {}}

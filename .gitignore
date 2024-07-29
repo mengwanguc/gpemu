@@ -2,3 +2,15 @@ profiler/*/raw_data/
 profiler/*/raw_data/*
 profiler/*/*/raw_data/
 profiler/*/*/raw_data/*
+__pycache__
+__pycache__/*
+*/__pycache__
+*/__pycache__/*
+*/*/__pycache__
+*/*/__pycache__/*
+*/*/*/__pycache__
+*/*/*/__pycache__/*
+*/*/*/*/__pycache__
+*/*/*/*/__pycache__/*
+*/*/*/*/*/__pycache__
+*/*/*/*/*/__pycache__/*
