@@ -1,7 +1,10 @@
+# GPEmu Profiler
+
+This directory contains the code for profiling the time and memory metrics of the DL models. The data are organized to be easily used by GPEmu to emulate DL runs.
+
 ## Installation on GPU nodes
 
-Profiling should be done on GPU nodes. Below are the instructions for installing the necessary softwares.
-
+Profiling should be done on GPU nodes to collect the GPU-related metrics. Below are the instructions for installing the necessary softwares.
 
 1. System configuration
 
@@ -10,6 +13,9 @@ All our scripts have been tested on Ubuntu 20 OS with CUDA 11.
 2. Set up ssh
 ```
 ssh-keygen -t rsa -b 4096
+```
+
+``` 
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 cat ~/.ssh/id_rsa.pub
 ```
@@ -34,6 +40,7 @@ git config --global user.email "mengwanguc@gmail.com"
 3. clone this repo to local
 
 ```
+cd ~
 git clone git@github.com:mengwanguc/gpemu.git
 ```
 
@@ -44,6 +51,14 @@ wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
 bash Anaconda3-2021.11-Linux-x86_64.sh
 ```
 After installation, log out and log in bash again.
+
+Or install conda in the non-interactive mode:
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+bash Anaconda3-2021.11-Linux-x86_64.sh -b -p $HOME/anaconda3
+$HOME/anaconda3/bin/conda init
+source ~/.bashrc
+```
 
 5. Install packages required for builing pytorch
 
@@ -61,25 +76,7 @@ conda install -y -c pytorch magma-cuda112  # or the magma-cuda* that matches you
 6. Install CuDNN:
 
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt-get update
-sudo apt-get install libcudnn8=8.1.1.33-1+cuda11.2
-```
-
-```
-cd ~
-mkdir cudnn
-cd cudnn
-pip install gdown
-gdown https://drive.google.com/uc?id=1IJGIH7Axqd8E5Czox_xRDCLOyvP--ej-
-tar -xvf cudnn-11.2-linux-x64-v8.1.1.33.tar
-sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
-sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64
-sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
-
-sudo apt-get update
-sudo apt-get install libcudnn8=8.1.1.33-1+cuda11.2
+bash ~/gpemu/profiler/install-cudnn.sh
 ```
 
 
@@ -112,3 +109,11 @@ python setup.py install
 ```
 pip install transformers
 ```
+
+
+## Profiling
+
+- To profile the compute time of models, see [time-compute](time-compute/README.md)
+- To profile the CPU-to-GPU data transfer time, see [time-transfer](time-transfer/README.md)
+- To profile the GPU-based preprocessing time, see [time-preprocess](time-preprocess/README.md)
+- To profile the memory usage of models, see [memory](memory/README.md)
