@@ -1,0 +1,1 @@
+{"train_top1": [16.49305534362793], "train_top5": [58.2139778137207], "val_top1": [13.593750953674316], "val_top5": [66.09375], "model": "resnet18", "args.epochs": 1, "args.batch_size": 256, "batch_acc_train": {}, "batch_acc_val": {}}

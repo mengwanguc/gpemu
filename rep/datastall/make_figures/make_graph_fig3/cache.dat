@@ -1,0 +1,8 @@
+shufflenet_v2_x0_5	40
+alexnet	39.4
+resnet18	37.8
+squeezenet1_0	39.7
+squeezenet1_1	32.2
+mobilenet_v2	38.7
+resnet50	32.1
+vgg11	38.8

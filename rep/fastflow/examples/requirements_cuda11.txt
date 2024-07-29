@@ -1,0 +1,6 @@
+-r requirements_common.txt
+
+# Dependencies to install DALI for CUDA 11.0
+--extra-index-url https://developer.download.nvidia.com/compute/redist
+nvidia-dali-cuda110
+nvidia-dali-tf-plugin-cuda110

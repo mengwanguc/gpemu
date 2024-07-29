@@ -1,0 +1,190 @@
+batch 0 time -> 0.000005722
+batch 1 time -> 0.002515554
+batch 2 time -> 0.007982254
+batch 3 time -> 0.002244473
+epoch time -> 0.820742846
+batch 0 time -> 0.003239632
+batch 1 time -> 0.002253771
+batch 2 time -> 0.002169132
+batch 3 time -> 0.002350569
+epoch time -> 0.798380136
+batch 0 time -> 0.015217066
+batch 1 time -> 0.029769659
+batch 2 time -> 0.001635790
+batch 3 time -> 0.001897573
+epoch time -> 0.693308592
+batch 0 time -> 0.003894329
+batch 1 time -> 0.002201080
+batch 2 time -> 0.002130032
+batch 3 time -> 0.003079414
+epoch time -> 0.596052170
+batch 0 time -> 0.003146887
+batch 1 time -> 0.001633644
+batch 2 time -> 0.001922607
+batch 3 time -> 0.002095938
+epoch time -> 0.567124605
+batch 0 time -> 0.003897905
+batch 1 time -> 0.001665831
+batch 2 time -> 0.001713514
+batch 3 time -> 0.002183676
+epoch time -> 0.620254278
+batch 0 time -> 0.002196550
+batch 1 time -> 0.002192974
+batch 2 time -> 0.002252340
+batch 3 time -> 0.001999855
+epoch time -> 0.650106907
+batch 0 time -> 0.009618282
+batch 1 time -> 0.004683495
+batch 2 time -> 0.002429485
+batch 3 time -> 0.002093315
+epoch time -> 0.661966801
+batch 0 time -> 0.002715111
+batch 1 time -> 0.001693249
+batch 2 time -> 0.003648043
+batch 3 time -> 0.004968882
+epoch time -> 0.620764732
+batch 0 time -> 0.006352186
+batch 1 time -> 0.001988649
+batch 2 time -> 0.002321720
+batch 3 time -> 0.002194405
+epoch time -> 0.675722122
+batch 0 time -> 0.002646208
+batch 1 time -> 0.002299309
+batch 2 time -> 0.002292395
+batch 3 time -> 0.002407789
+epoch time -> 0.640883446
+batch 0 time -> 0.002644539
+batch 1 time -> 0.002032280
+batch 2 time -> 0.002415657
+batch 3 time -> 0.002055407
+epoch time -> 0.599215746
+batch 0 time -> 0.003276110
+batch 1 time -> 0.002353907
+batch 2 time -> 0.002078056
+batch 3 time -> 0.002336979
+epoch time -> 0.635093927
+batch 0 time -> 0.003462791
+batch 1 time -> 0.001896381
+batch 2 time -> 0.001662254
+batch 3 time -> 0.001797915
+epoch time -> 0.786612511
+batch 0 time -> 0.002678156
+batch 1 time -> 0.004597187
+batch 2 time -> 0.005093098
+batch 3 time -> 0.002106667
+epoch time -> 0.619386911
+batch 0 time -> 0.003103256
+batch 1 time -> 0.002346992
+batch 2 time -> 0.002419710
+batch 3 time -> 0.001782894
+epoch time -> 0.632704973
+batch 0 time -> 0.002667189
+batch 1 time -> 0.002166271
+batch 2 time -> 0.001790285
+batch 3 time -> 0.002551079
+epoch time -> 0.532721758
+batch 0 time -> 0.003104925
+batch 1 time -> 0.002526045
+batch 2 time -> 0.002426624
+batch 3 time -> 0.002557993
+epoch time -> 0.541219473
+batch 0 time -> 0.003106594
+batch 1 time -> 0.002332449
+batch 2 time -> 0.002048254
+batch 3 time -> 0.002215624
+epoch time -> 0.555232286
+batch 0 time -> 0.002767086
+batch 1 time -> 0.002459049
+batch 2 time -> 0.001785517
+batch 3 time -> 0.002106190
+epoch time -> 0.546051025
+batch 0 time -> 0.002907276
+batch 1 time -> 0.002451181
+batch 2 time -> 0.001993656
+batch 3 time -> 0.001764536
+epoch time -> 0.544107199
+batch 0 time -> 0.003020525
+batch 1 time -> 0.002490997
+batch 2 time -> 0.002483130
+batch 3 time -> 0.002669811
+epoch time -> 0.573442936
+batch 0 time -> 0.003074169
+batch 1 time -> 0.001805782
+batch 2 time -> 0.002080202
+batch 3 time -> 0.002202749
+epoch time -> 0.587615728
+batch 0 time -> 0.003031492
+batch 1 time -> 0.002363920
+batch 2 time -> 0.002179623
+batch 3 time -> 0.002338648
+epoch time -> 0.603175163
+batch 0 time -> 0.003247023
+batch 1 time -> 0.002265453
+batch 2 time -> 0.002003908
+batch 3 time -> 0.002161264
+epoch time -> 0.604879618
+batch 0 time -> 0.004142761
+batch 1 time -> 0.004528761
+batch 2 time -> 0.002454042
+batch 3 time -> 0.002164602
+epoch time -> 0.539072752
+batch 0 time -> 0.002985716
+batch 1 time -> 0.002339602
+batch 2 time -> 0.002699375
+batch 3 time -> 0.001909018
+epoch time -> 0.598965406
+batch 0 time -> 0.003113270
+batch 1 time -> 0.002006531
+batch 2 time -> 0.001932383
+batch 3 time -> 0.001962185
+epoch time -> 0.549044132
+batch 0 time -> 0.003159285
+batch 1 time -> 0.002529144
+batch 2 time -> 0.002635479
+batch 3 time -> 0.002481222
+epoch time -> 0.533055782
+batch 0 time -> 0.003018379
+batch 1 time -> 0.002070427
+batch 2 time -> 0.002454519
+batch 3 time -> 0.001973867
+epoch time -> 0.508408546
+batch 0 time -> 0.003295898
+batch 1 time -> 0.002344608
+batch 2 time -> 0.002386570
+batch 3 time -> 0.002584696
+epoch time -> 0.569099665
+batch 0 time -> 0.003103971
+batch 1 time -> 0.002508402
+batch 2 time -> 0.002243519
+batch 3 time -> 0.002316952
+epoch time -> 0.581322432
+batch 0 time -> 0.002845049
+batch 1 time -> 0.002497673
+batch 2 time -> 0.002489090
+batch 3 time -> 0.002602577
+epoch time -> 0.549226522
+batch 0 time -> 0.003379345
+batch 1 time -> 0.002662897
+batch 2 time -> 0.001820803
+batch 3 time -> 0.001983166
+epoch time -> 0.578592777
+batch 0 time -> 0.003197908
+batch 1 time -> 0.002017260
+batch 2 time -> 0.002339602
+batch 3 time -> 0.002754211
+epoch time -> 0.541902065
+batch 0 time -> 0.008786201
+batch 1 time -> 0.004868746
+batch 2 time -> 0.002623320
+batch 3 time -> 0.002516985
+epoch time -> 0.544823170
+batch 0 time -> 0.003067732
+batch 1 time -> 0.001926184
+batch 2 time -> 0.001990080
+batch 3 time -> 0.002527952
+epoch time -> 0.529964924
+batch 0 time -> 0.003359795
+batch 1 time -> 0.001932144
+batch 2 time -> 0.002124548
+batch 3 time -> 0.002083063
+epoch time -> 0.595986605

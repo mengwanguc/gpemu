@@ -1,0 +1,37 @@
+We don't find the matching batch size 256. Using other batch size to estimate...
+batch_size: 256	 batch_cpu2gpu_time: 0.0128	 batch_gpu_compute_time: 1.504
+=> creating model 'resnet18'
+batch 0 	 data_time: 4.659759045 	 cpu2gpu_time: 0.012891531 	 gpu_time: 1.505541801
+4.659759044647217 0.012891530990600586 1.5055418014526367
+batch 1 	 data_time: 0.000155687 	 cpu2gpu_time: 0.012894630 	 gpu_time: 1.505543232
+4.65991473197937 0.025786161422729492 3.011085033416748
+batch 2 	 data_time: 0.000653505 	 cpu2gpu_time: 0.012885332 	 gpu_time: 1.505587578
+4.6605682373046875 0.03867149353027344 4.516672611236572
+batch 3 	 data_time: 0.000700951 	 cpu2gpu_time: 0.012892485 	 gpu_time: 1.505587101
+4.661269187927246 0.05156397819519043 6.022259712219238
+batch 4 	 data_time: 0.000925064 	 cpu2gpu_time: 0.012902975 	 gpu_time: 1.505592585
+4.66219425201416 0.06446695327758789 7.527852296829224
+batch 5 	 data_time: 0.000821352 	 cpu2gpu_time: 0.012896061 	 gpu_time: 1.505543232
+4.663015604019165 0.0773630142211914 9.033395528793335
+batch 6 	 data_time: 0.000701904 	 cpu2gpu_time: 0.012936115 	 gpu_time: 1.505589247
+4.66371750831604 0.09029912948608398 10.538984775543213
+batch 7 	 data_time: 0.000673294 	 cpu2gpu_time: 0.012883663 	 gpu_time: 1.505086660
+4.664390802383423 0.10318279266357422 12.044071435928345
+batch 8 	 data_time: 0.000806093 	 cpu2gpu_time: 0.012940645 	 gpu_time: 1.505124331
+4.665196895599365 0.11612343788146973 13.549195766448975
+batch 9 	 data_time: 0.000682116 	 cpu2gpu_time: 0.012875319 	 gpu_time: 1.504400969
+4.665879011154175 0.1289987564086914 15.05359673500061
+batch 10 	 data_time: 0.000664711 	 cpu2gpu_time: 0.012877703 	 gpu_time: 1.504855871
+4.66654372215271 0.1418764591217041 16.558452606201172
+batch 11 	 data_time: 0.000652313 	 cpu2gpu_time: 0.012930632 	 gpu_time: 1.505598783
+4.667196035385132 0.15480709075927734 18.064051389694214
+Traceback (most recent call last):
+  File "/home/cc/gpufs/ffcv/main-original-ffcv-v2-cuda-emulatorv0.py", line 583, in <module>
+    main()
+  File "/home/cc/gpufs/ffcv/main-original-ffcv-v2-cuda-emulatorv0.py", line 128, in main
+    main_worker(args.gpu, ngpus_per_node, args)
+  File "/home/cc/gpufs/ffcv/main-original-ffcv-v2-cuda-emulatorv0.py", line 280, in main_worker
+    train(train_loader, model, criterion, optimizer, epoch, args)
+  File "/home/cc/gpufs/ffcv/main-original-ffcv-v2-cuda-emulatorv0.py", line 431, in train
+    time.sleep(args.batch_gpu_compute_time/args.gpu_count)
+KeyboardInterrupt

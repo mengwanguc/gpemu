@@ -1,0 +1,6 @@
+-r requirements_common.txt
+
+# Dependencies to install DALI for CUDA 10.2
+--extra-index-url https://developer.download.nvidia.com/compute/redist
+nvidia-dali-cuda102
+nvidia-dali-tf-plugin-cuda102

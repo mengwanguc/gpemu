@@ -1,0 +1,27 @@
+48:24(GPU)
+tf 35 27
+tf-dsr-all 34 27
+tf-dslr-all 37 27
+dali 73 66
+ff 29 27
+
+48:24(CPU+emulator)
+tf 32 32
+tf-dsr-all 32 31
+tf-dslr-all 32 31
+dali 
+ff 32 31
+
+1:14(GPU)
+tf 159  152
+tf-dsr-all 34 26
+tf-dslr-all 39 33
+dali 187 178
+ff 38 29
+
+1:14(CPU+emulator)
+tf 150 148
+tf-dsr-all 34 33
+tf-dslr-all 35 34
+dali 
+ff 35 34

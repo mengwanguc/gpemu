@@ -1,0 +1,4 @@
+           Files: 87473
+     Directories: 92
+  Resident Pages: 2519134/2620080  9G/9G  96.1%
+         Elapsed: 1.0358 seconds

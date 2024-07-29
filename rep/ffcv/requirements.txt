@@ -1,0 +1,13 @@
+terminaltables
+pytorch_pfn_extras
+fastargs
+matplotlib
+scikit-learn
+imgcat
+pandas
+assertpy
+tqdm
+psutil
+webdataset
+torchmetrics
+matplotlib
