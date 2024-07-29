@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# A fast way (one line command) to run gitc commit with messages
+
+# This script runs svn update before you try to commit.
+# This way you reduce conflicts.
+
+# Put this gitc file in your ~/bin/ ($HOME/bin) folder
+# Run: chmod 700 ~/bin/gitc
+#   (all script must be in executable 700 mode)
+# If you use bash for your shell, open your ~/.bashrc file (or create one)
+# and add this line to your ~/.bashrc
+#    PATH="~/bin:$PATH"
+# and then run bash again in your shell so your .bashrc is reloaded
+# or just exist the current shell, and open a new one
+# If you use csh as your shell, then modify your ~/.cshrc appropriately
+# similar to above.
+
+
+# no arg, mean this prints the instruction
+if [ $# == 0 ]; then 
+    echo ""
+    echo "  Use : gitc <commit message in one line> "
+    echo "  Ex  : gitc I added some new code "
+    echo ""
+    exit
+fi
+
+
+# update first
+echo "\n-------------------------------------- git pull"
+git pull
+
+
+# status
+echo "\n-------------------------------------- git status"
+git status
+
+
+# add all updated file ( no need since we already use git commit -a)
+# echo "\n-------------------------------------- git add -u * "
+# git add -u *
+
+
+# the commit message, if you supply "gitc ." then "." means No message
+msg="$*"
+if [ "$msg" == "." ]; then
+    msg="No message"
+    echo "Existing.  Just checking, git pull, with 'gitc .' "
+    exit
+fi
+
+# commit
+echo "\n-------------------------------------- git commit -m $USER: $msg"
+git commit -a -m "$USER: $msg"
+
+# push
+echo "\n-------------------------------------- git push "
+git push 
+
+# git log HEAD
+echo "\n-------------------------------------- git log HEAD"
+git log HEAD  | head -n 10
+
+# git status
+echo "\n-------------------------------------- git status"
+git status

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gpemu
+  namespace: kube-system
+data:
+  config.json: |
+    {
+      "resourceName": "github.com/e-gpu",
+      "socketName": "gpemu.sock",
+      "eGPUs": [{
+        "hostPath": "/edev/egpu*",
+        "containerPath": "/edev/egpu*",
+        "permission": "rw"
+      }]
+    }

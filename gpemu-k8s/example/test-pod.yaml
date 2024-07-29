@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gpemu-test
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - image: alpine
+    name: gpemu-test-ctr
+    resources:
+      limits:
+        github.com/e-gpu: 2
+    command:
+    - sh
+    - -c
+    - |
+      ls /edev
+      sleep 1000000

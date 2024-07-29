@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dummy-test
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - image: alpine
+    name: dummy-test-ctr
+    command:
+    - sh
+    - -c
+    - |
+      ls /edev
+      sleep 1000000
