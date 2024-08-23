@@ -28,7 +28,7 @@ def remove_outliers_using_residuals(df, threshold=1.5):
     non_outliers = residuals <= outlier_threshold
     return df[non_outliers]
 
-def process_and_save_model(gpu_name, time_type, model_name, base_dir, target_dir):
+def process_and_save_model(gpu_name, time_type, model_name, base_dir, target_dir, predict_unknowns):
     model_path = os.path.join(base_dir, gpu_name, time_type, model_name)
     if os.path.isdir(model_path):
         data = []
@@ -56,6 +56,7 @@ def process_and_save_model(gpu_name, time_type, model_name, base_dir, target_dir
         csv_path = os.path.join(target_path, 'time_by_batch_size.csv')
         
         df.to_csv(csv_path, index=False)
+        df_original = df.copy()
         
         df = remove_outliers_using_residuals(df)
 
@@ -75,8 +76,20 @@ def process_and_save_model(gpu_name, time_type, model_name, base_dir, target_dir
 
         model_path = os.path.join(target_path, 'regression_model.pkl')
         joblib.dump((model, poly, mse, r2), model_path)
+        
+        if predict_unknowns:
+            for i in range(1, 257):
+                if i not in df_original['Batch_Size'].values:
+                    X_unknown = np.array([[i]])
+                    X_unknown_poly = poly.transform(X_unknown)
+                    y_unknown = model.predict(X_unknown_poly)
+                    df_original = df_original.append({'Batch_Size': i, 'Time_In_SECONDS': y_unknown[0]}, 
+                                   ignore_index=True)
+            df_original = df_original.sort_values(by='Batch_Size')
+            df_original.to_csv(csv_path, index=False)
+            
 
-def process_all_models(base_dir='raw_data', target_dir='processed_data'):
+def process_all_models(base_dir='raw_data', target_dir='processed_data', predict_unknowns=True):
     for gpu_name in os.listdir(base_dir):
         gpu_path = os.path.join(base_dir, gpu_name)
         if os.path.isdir(gpu_path):
@@ -86,7 +99,7 @@ def process_all_models(base_dir='raw_data', target_dir='processed_data'):
                     for model_name in os.listdir(time_type_path):
                         model_path = os.path.join(time_type_path, model_name)
                         if os.path.isdir(model_path):
-                            process_and_save_model(gpu_name, time_type, model_name, base_dir, target_dir)
+                            process_and_save_model(gpu_name, time_type, model_name, base_dir, target_dir, predict_unknowns)
 
 
 def main():
@@ -95,9 +108,11 @@ def main():
                         help='Base directory containing raw data.')
     parser.add_argument('--target_dir', type=str, default='../../profiled_data/time/compute',
                         help='Target directory to save processed data and models.')
+    parser.add_argument('--predict_unknowns', action='store_true',
+                        help='Predict unknown times for batch sizes between 1-256.')
     args = parser.parse_args()
 
-    process_all_models(args.base_dir, args.target_dir)
+    process_all_models(args.base_dir, args.target_dir, args.predict_unknowns)
 
 
 if __name__ == "__main__":

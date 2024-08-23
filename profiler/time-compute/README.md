@@ -29,3 +29,10 @@ python profile_all.py
 ```
 python organize_data.py
 ```
+
+4. Organize the raw data into csv files, and also predict the compute time for batch sizes for which we didn't get profiled data.
+For example, some models could be too large to fit into GPU memory for batch size 256. In this case, we can predict its compute time
+if the GPU memory is increased to be large enough.
+```
+python organize_data.py --predict_unknowns
+```

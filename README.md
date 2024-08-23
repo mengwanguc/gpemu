@@ -20,9 +20,7 @@ GPEmu is an emulator with the purpose of prototyping deep learning system resear
 
 2. Set up ssh key for Github
 ```
-ssh-keygen -t rsa -b 4096
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-cat ~/.ssh/id_rsa.pub
+bash setup-ssh-key.sh
 ```
 
 Copy and paste into: https://github.com/settings/keys
@@ -37,30 +35,11 @@ git clone https://github.com/mengwanguc/gpemu.git
 4. Install conda
 
 ```
-cd ~
-wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
-bash Anaconda3-2021.11-Linux-x86_64.sh
+bash install-conda.sh
+source ~/.bashrc
 ```
 
-When it prompts to ask "yes|no", always put "yes".
-
-After installation, log out the terminal (just close terminal) and log in again. You should see your terminal outputs:
-
-```
-(base) cc@ubuntu:~/
-```
-Bash again after logging in. 
-```
-bash Anaconda3-2021.11-Linux-x86_64.sh
-```
-
-5. Install packages required for builing pytorch
-
-```
-conda install -y astunparse numpy ninja pyyaml mkl mkl-include setuptools cmake cffi typing_extensions future six requests dataclasses
-```
-
-6. Download and build our mlock package (which is used to emulate page-locked (pinned) memory)
+5. Download and build our mlock package (which is used to emulate page-locked (pinned) memory)
 
 ```
 cd ~
@@ -69,17 +48,15 @@ cd mlock
 python setup.py install
 ```
 
-7. Download and build minio
+
+6. Install PyTorch
+
+Install packages required for builing pytorch
 
 ```
-cd ~
-git clone git@github.com:gustrain/minio.git
-cd minio
-python setup.py install
+conda install -y astunparse numpy ninja pyyaml mkl mkl-include setuptools cmake cffi typing_extensions future six requests dataclasses
 ```
-
-
-8. Download our custom pytorch and build it (Note that we use "export USE_CUDA=0" to not install any cuda/GPU-related things.)
+Download our custom pytorch and build it (Note that we use "export USE_CUDA=0" to not install any cuda/GPU-related things.)
 
 ```
 cd ~
@@ -132,3 +109,4 @@ sudo reboot
 - Our own implementation of MinIO cache (from DataStall, VLDB '21), as well as our new micro-optimization SSF (Small File First) cache: https://github.com/gustrain/minio
 - Our own implementation of CoorDL (distributed MinIO) as well as Locality-Aware Distributed Cache (HiPC): https://github.com/gustrain/ladcache
 - Our new micro-optimization Asycn Batch data loader: https://github.com/gustrain/async-loader
+- Our dirty repository with unorganized code (we are working on organizing and moving code to this repo): https://github.com/mengwanguc/gpufs

@@ -44,7 +44,7 @@ num_classes = 100
 gpu = 0
 
 for model in models:
-    for batch_size in range(1,2):
+    for batch_size in range(1,257):
         cmd = [
             'python', 'memory_profiler.py',
             '--arch', model,
