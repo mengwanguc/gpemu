@@ -110,3 +110,6 @@ sudo reboot
 - Our own implementation of CoorDL (distributed MinIO) as well as Locality-Aware Distributed Cache (HiPC): https://github.com/gustrain/ladcache
 - Our new micro-optimization Asycn Batch data loader: https://github.com/gustrain/async-loader
 - Our dirty repository with unorganized code (we are working on organizing and moving code to this repo): https://github.com/mengwanguc/gpufs
+
+## Annoucements/Notes
+2024/8/27: We are always trying to polish our repos. However, since the students are all busy with internships this summer, our time is limited. Please bear with us, and don't hesitate to reach out to me (wangm12@uchicago.edu) if you have any questions.
