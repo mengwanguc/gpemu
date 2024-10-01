@@ -1,0 +1,84 @@
+48:24 (GPU)
+tf 37s 30s
+tf-dsr-all 35s 29s
+tf-dslr-all 32s 29s
+dali 64s 59s
+ff 34s 30s
+
+7:7(GPU)
+tf 46s 36s
+tf-dsr-all 41s 32s
+tf-dslr-all 39s 30s
+dali 74s 66s
+ff 42s 36s
+
+7:14
+tf 
+tf-dsr-all 
+tf-dslr-all 39s 29s
+dali 
+ff 40s 36s
+
+1:14
+tf 204s 195s
+tf-dsr-all 56s 46s
+tf-dslr-all 61s 54s
+dali 197s 188s
+ff 35s 29s
+
+14:1
+tf 49s 29s
+tf-dsr-all 170s 166s
+tf-dslr-all 41s 36s
+dali 72s 62s
+ff 34s 39s
+
+
+48:24(CPU+GPU)
+tf 37s 30s
+
+48:24(CPU)
+tf 258s 250s
+tf-dsr-all 256s 244s
+
+48:24(CPU with emulator)
+tf 38s 37s
+tf-dsr-all 39s 37s
+tf-dslr-all 39s 37s
+ff 38s 36s
+
+1:14(CPU with emulator)
+tf 39s 36s
+
+1:14(GPU)
+tf 204s 195s
+
+
+not using tf.function:
+48:24(GPU)
+tf 82 74
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 
+
+48:24(CPU+emulator)
+tf 79 77
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 
+
+1:14(GPU)
+tf 218  210
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 101 99
+
+1:14(CPU+emulator)
+tf 234 223
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 

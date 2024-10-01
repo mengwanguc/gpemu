@@ -1,0 +1,28 @@
+not using tf.function:
+48:24(GPU)
+tf 82 74
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 
+
+48:24(CPU+emulator)
+tf 79 77
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 
+
+1:14(GPU)
+tf 218  210
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 101 99
+
+1:14(CPU+emulator)
+tf 234 223
+tf-dsr-all 
+tf-dslr-all 
+dali 
+ff 
